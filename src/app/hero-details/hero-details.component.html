@@ -1,0 +1,16 @@
+
+
+<div>
+  <br>
+  <h3 [style.color]="'rgb(129, 95, 95)'">The Hero Details..,,</h3>
+  <p [style.color]="'rgb(9, 129, 228)'" >Selected Hero is {{heroDetails.name}}</p>
+</div>
+<br>
+<div>
+<button  class="button" (click)="marvelInfo()">Marvel Info</button>&nbsp;
+<button  class="button" (click)="originalInfo()">Original Info</button>
+</div>
+
+<app-hero-details-overview *ngIf="displayConditionForOverview" [selectedHeroObject]="heroDetails"></app-hero-details-overview>  
+<app-hero-details-origianl-info  *ngIf="displayConditionForOriginalInfo"  [selectedHeroObject]="heroDetails">></app-hero-details-origianl-info>
+<!-- <router-outlet></router-outlet> -->
